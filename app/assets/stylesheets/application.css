@@ -32,7 +32,6 @@ th {
 nav.navbar {
     min-height: 38px;
     background: #fcefe8;
-    float: none;
 }
 
 .navbar-nav a.brand {

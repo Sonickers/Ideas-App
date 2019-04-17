@@ -1,15 +1,15 @@
 
 <div class="row">
   <div class="col-md-9">
-    <%= image_tag(@idea.picture_url, width: '300px') if @idea.picture.present? %>
+    <%= image_tag(@product.picture_url, width: '300px') if @product.picture.present? %>
 
   <div class="col-md-3">
-    <p><b>Name: </b><%= @idea.name %></p>
-    <p><b>Description: </b><%= @idea.description %></p>
+    <p><b>Name: </b><%= @product.name %></p>
+    <p><b>Description: </b><%= @product.description %></p>
     <p>
-      <%= link_to 'Edit', edit_idea_path(@idea) %> |
-      <%= link_to 'Destroy', @idea, data: { confirm: 'Are you sure?' }, method: :delete %> |
-      <%= link_to 'Back', ideas_path %>
+      <%= link_to 'Edit', edit_product_path(@product) %> |
+      <%= link_to 'Destroy', @product, data: { confirm: 'Are you sure?' }, method: :delete %> |
+      <%= link_to 'Back', products_path %>
     </p>
   </div>
 
