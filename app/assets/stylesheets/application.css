@@ -15,17 +15,30 @@
  */
 
 
-body { padding-top: 60px; }
-footer { margin-top: 100px; }
-table, td, th { vertical-align: middle; border: none; }
-th { border-bottom: 1px solid #DDD; }
+body {
+    padding-top: 60px;
+    font-family: 'Montserrat', sans-serif;
+    color: #777777;
+}
+
+table, td, th {
+    vertical-align: middle;
+    border: none;
+}
+th {
+    border-bottom: 1px solid #DDD;
+}
 
 nav.navbar {
     min-height: 38px;
     background: #fcefe8;
+    float: none;
 }
 
-.navbar-nav a.brand { font-size: 18px; }
+.navbar-nav a.brand {
+    font-size: 18px;
+}
+
 .navbar-nav a.brand:hover {
     color: #fff;
     background-color: transparent;

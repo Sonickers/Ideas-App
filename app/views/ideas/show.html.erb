@@ -1,8 +1,17 @@
 
 <div class="row">
   <div class="col-md-9">
-    <%= image_tag(@idea.picture_url, width: '100%') if @idea.picture.present? %>
-    add
+    <%= image_tag(@idea.picture_url, width: '300px') if @idea.picture.present? %>
+
+  <div class="col-md-3">
+    <p><b>Name: </b><%= @idea.name %></p>
+    <p><b>Description: </b><%= @idea.description %></p>
+    <p>
+      <%= link_to 'Edit', edit_idea_path(@idea) %> |
+      <%= link_to 'Destroy', @idea, data: { confirm: 'Are you sure?' }, method: :delete %> |
+      <%= link_to 'Back', ideas_path %>
+    </p>
+  </div>
 
     <h3>Comments</h3>
     <% @comments.each do |comment| %>
@@ -14,15 +23,5 @@
       </div>
     <% end %>
     <%= render partial: 'comments/form', locals: { comment: @comment } %>
-  </div>
-
-  <div class="col-md-3">
-    <p><b>Name: </b><%= @idea.name %></p>
-    <p><b>Description: </b><%= @idea.description %></p>
-    <p>
-      <%= link_to 'Edit', edit_idea_path(@idea) %> |
-      <%= link_to 'Destroy', @idea, data: { confirm: 'Are you sure?' }, method: :delete %> |
-      <%= link_to 'Back', ideas_path %>
-    </p>
   </div>
 </div>

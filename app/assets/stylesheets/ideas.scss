@@ -2,8 +2,25 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.products-body {
+  margin-top: 70px;
+}
+
+.container a {
+  color: #2E2F30;
+  text-align: center;
+}
+
 .container a:hover {
-  color: #f55e55;
+  color: dimgrey;
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: transparent;
+}
+
+.container input[type="submit"] {
+  height: 30px;
+  font-size: 13px;
+  background-color: #f55e55;
+  border: none;
+  color: #fff;
 }
