@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get 'pages/info'
   root to: redirect('./products')
   resources :products
+  root to: 'products#index'
 end

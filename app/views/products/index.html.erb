@@ -1,14 +1,20 @@
-<div class="products-body">
+<%= form_tag products_path, method: :get do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= button_tag "Search", name: nil %>
+  </p>
+<% end %>
 
-  <% @products.in_groups_of(3) do |group| %>
-    <div class="row">
-      <% group.compact.each do |product| %>
-        <div class="col-md-4">
-          <%= link_to image_tag(product.picture_url, :width => 300), product if product.picture.present? %>
-          <h4><%= link_to product.name, product %></h4>
-          <%= product.description %>
+<div class="products-body">
+      <% @products.in_groups_of(3) do |group| %>
+        <div class="row">
+          <% group.compact.each do |product| %>
+            <div class="col-md-4">
+              <%= link_to image_tag(product.picture_url, :width => 300), product if product.picture.present? %>
+              <h4><%= link_to product.name, product %></h4>
+              <%= product.description %>
+            </div>
+          <% end %>
         </div>
       <% end %>
-    </div>
-  <% end %>
 </div>
