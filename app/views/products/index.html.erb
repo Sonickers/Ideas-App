@@ -12,15 +12,19 @@
 <% end %>
 
 <div class="products-body">
-      <% @products.in_groups_of(3) do |group| %>
-        <div class="row">
-          <% group.compact.each do |product| %>
-            <div class="col-md-4">
-              <%= link_to image_tag(product.picture_url, :width => 300), product if product.picture.present? %>
-              <h4><%= link_to product.name, product %></h4>
-              <%= product.description %>
+  <% @products.in_groups_of(3) do |group| %>
+    <div class="row">
+      <% group.compact.each do |product| %>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail product-thumbnail">
+            <%= link_to image_tag(product.picture_url), product if product.picture.present? %>
+            <div class="caption">
+              <h3><%= link_to product.name, product %></h3>
+              <p><%= product.description %></p>
             </div>
-          <% end %>
+          </div>
         </div>
       <% end %>
+    </div>
+  <% end %>
 </div>

@@ -16,3 +16,9 @@
   text-decoration: none;
   background-color: transparent;
 }
+
+.product-thumbnail {
+  a > img {
+    height: 200px;
+  }
+}
